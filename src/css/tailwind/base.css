@@ -1,0 +1,78 @@
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: currentColor;
+    box-sizing: border-box;
+  }
+  @font-face {
+    font-family: "nunito";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("./../../assets/font/nunito/nunito-300.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "nunito";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("./../../assets/font/nunito/nunito-regular.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "nunito";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("./../../assets/font/nunito/nunito-600.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "nunito";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("./../../assets/font/nunito/nunito-700.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "vazir";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("./../../assets/font/vazir/Vazir-Light-FD-WOL.woff2")
+      format("woff2");
+  }
+  @font-face {
+    font-family: "vazir";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("./../../assets/font/vazir/Vazir-Regular-FD-WOL.woff2")
+      format("woff2");
+  }
+  @font-face {
+    font-family: "vazir";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("./../../assets/font/vazir/Vazir-Medium-FD-WOL.woff2")
+      format("woff2");
+  }
+  @font-face {
+    font-family: "vazir";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("./../../assets/font/vazir/Vazir-Bold-FD-WOL.woff2")
+      format("woff2");
+  }
+  input {
+    @apply bg-transparent text-light-primary outline-hidden dark:text-dark-primary;
+    font-family: "nunito", "vazir";
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}

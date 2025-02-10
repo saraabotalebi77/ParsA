@@ -1,0 +1,99 @@
+@import "tailwindcss";
+@import "./tailwind/base.css";
+@import "./tailwind/components.css";
+@import "./tailwind/utilities.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-*: initial;
+  --color-transparent: transparent;
+  --color-current: currentColor;
+  --color-inhert: inherit;
+
+  --font-*: initial;
+  --font-vazir: vazir;
+  --font-nunito: nunito;
+
+  /* ********************************************** */
+  --color-dark-bg: #363738;
+  --color-dark-text: #eae8e8;
+  --color-dark-muted: #ccc;
+  --color-dark-bg-btn: #d84040;
+
+  --color-dark-maroon-100: #ff6c66;
+  --color-dark-maroon-200: #f55c58;
+  --color-dark-maroon-300: #e64e4c;
+  --color-dark-maroon-400: #d84040;
+  --color-dark-maroon-500: #ca3134;
+  --color-dark-maroon-600: #bc2028;
+
+  --color-light-bg: #fff;
+  --color-light-text: #000;
+  --color-light-muted: #6d6d6d;
+  --color-light-bg-btn: #c1322c;
+
+  --color-light-maroon-100: #ec5b50;
+  --color-light-maroon-200: #dd4e44;
+  --color-light-maroon-300: #cf4038;
+  --color-light-maroon-400: #c1322c;
+  --color-light-maroon-500: #b3221f;
+  --color-light-maroon-600: #a50c11;
+
+  --shadow-light : 0 0px 10px rgb(0 0 0 / 22%), 0 1px 20px rgb(117 117 117 / 8%);
+  --shadow-dark :  0 0px 8px rgb(0 0 0 / 23%), 0 1px 10px rgb(83 83 83 / 1%);
+
+  --breakpoint-xs: 512px;
+  --breakpoint-2xs: 384px;
+
+  /* ********************************************** */
+
+  --color-dark-primary: #8f8f8f;
+  --color-dark-secondary: #707070;
+  /* --color-dark-muted: #696969;/ */
+
+  --color-dark-bluenavy-100: #236591;
+  --color-dark-bluenavy-200: #1d477a;
+  --color-dark-bluenavy-300: #637383;
+  --color-dark-bluenavy-400: #385068;
+  --color-dark-bluenavy-500: #2e5585;
+  --color-dark-bluenavy-600: #4d5f72;
+
+  --color-dark-dark-btn-bg: #8d8d8d;
+  --color-dark-light-btn-bg: #e4e4e4;
+  --color-dark-btn-text: #d0d0d0;
+  --color-dark-separator-light: #4d4848;
+  --color-dark-separator: #424242;
+  /* --color-dark-bg: #18191b; */
+  --color-dark-foreground: #1e2022;
+  --color-dark-input-bg: #232223;
+
+  --color-light-primary: #3a3a3a;
+  --color-light-secondary: #8f8f8f;
+  /* --color-light-muted: #909090; */
+
+  --color-light-bluenavy-100: #00365a;
+  --color-light-bluenavy-200: #184f90;
+  --color-light-bluenavy-300: #8a9fb4;
+  --color-light-bluenavy-400: #2c4d6e;
+  --color-light-bluenavy-500: #245794;
+  --color-light-bluenavy-600: #6a7b8d;
+
+  --color-light-dark-btn-bg: #131113;
+  --color-light-light-btn-bg: #ececec;
+  --color-light-btn-text: #fff;
+  --color-light-separator-light: #f3f3f3;
+  --color-light-separator: #d7d7d7;
+  /* --color-light-bg: #f8f8f8; */
+  --color-light-foreground: #fff;
+  --color-light-input-bg: #fff;
+
+  /* --shadow-dark: 0 1px 15px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.1); */
+  /* --shadow-light: 0 1px 15px rgba(0, 0, 0, 0.04), 0 1px 6px rgba(0, 0, 0, 0.04); */
+  --shadow-primary-btn: 0 1px 2px 0 rgba(0, 0, 0, 0.15),
+    0 1px 3px 1px rgba(0, 0, 0, 0.15);
+  --shadow-hoverable-primary-btn: 0 1px 3px 0 rgba(0, 0, 0, 0.15),
+    0 4px 6px 2px rgba(0, 0, 0, 0.15);
+
+ 
+}
