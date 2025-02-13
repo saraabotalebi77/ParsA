@@ -80,7 +80,7 @@ const Header: FC<PropsComponents> = ({ handleMenu, menu }) => {
     }
   };
   return (
-    <header className="sticky top-0 z-1 flex h-[72px] w-full items-center justify-between bg-light-foreground px-3 shadow-light lg:px-6 dark:bg-dark-foreground dark:shadow-dark">
+    <header className="sticky top-0 z-2 flex h-[72px] w-full items-center justify-between bg-light-foreground px-3 shadow-light lg:px-6 dark:bg-dark-foreground dark:shadow-dark">
       <div className="flex items-center gap-3 lg:hidden">
         <button
           id="responsive-menu-icon"
@@ -104,7 +104,7 @@ const Header: FC<PropsComponents> = ({ handleMenu, menu }) => {
         </label>
         <form
           onSubmit={handleSubmitResponsiveForm}
-          className="absolute left-0 top-0 z-10 hidden h-full w-full items-center bg-light-foreground px-3 peer-checked/seaechForm:flex dark:bg-dark-foreground"
+          className="absolute top-0 left-0 z-10 hidden h-full w-full items-center bg-light-foreground px-3 peer-checked/seaechForm:flex dark:bg-dark-foreground"
         >
           <input
             placeholder="Search..."
@@ -133,15 +133,15 @@ const Header: FC<PropsComponents> = ({ handleMenu, menu }) => {
         <form className="hidden rounded-full bg-light-bg p-2 lg:block dark:bg-dark-bg">
           <input
             placeholder="Search..."
-            className="border-0 bg-transparent outline-hidden px-2"
+            className="border-0 bg-transparent px-2 outline-hidden"
           />
-          <span className="text-light-separator dark:text-dark-separator inline-flex items-center justify-center text-sm">
+          <span className="inline-flex items-center justify-center text-sm text-light-separator dark:text-dark-separator">
             <i className="simple-icon-magnifier"></i>
           </span>
         </form>
         <Link
           to="#"
-          className="hidden mx-3 lg:mx-0 text-xs rounded-3xl border border-current px-4 py-2 text-light-bluenavy-100 transition-all duration-300 hover:border-light-bluenavy-100 hover:bg-light-bluenavy-100 hover:text-light-foreground md:block dark:text-dark-bluenavy-100 dark:hover:border-dark-bluenavy-100 dark:hover:bg-dark-bluenavy-100 dark:hover:text-dark-foreground"
+          className="mx-3 hidden rounded-3xl border border-current px-4 py-2 text-xs text-light-bluenavy-100 transition-all duration-300 hover:border-light-bluenavy-100 hover:bg-light-bluenavy-100 hover:text-light-foreground md:block lg:mx-0 dark:text-dark-bluenavy-100 dark:hover:border-dark-bluenavy-100 dark:hover:bg-dark-bluenavy-100 dark:hover:text-dark-foreground"
         >
           BUY
         </Link>
@@ -149,7 +149,7 @@ const Header: FC<PropsComponents> = ({ handleMenu, menu }) => {
 
       <Link
         to="/"
-        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
       >
         <img
           src="./images/logos/black.svg"
@@ -168,13 +168,13 @@ const Header: FC<PropsComponents> = ({ handleMenu, menu }) => {
         />
       </Link>
 
-      <div className="grow-1 flex items-center justify-end gap-4">
+      <div className="flex grow-1 items-center justify-end gap-4">
         <div className="group/tooltip relative hidden sm:block">
           <Switch
             onChange={handleChangeTheme}
             className="peer-checked/switch bg-light-separator text-[#fff] dark:bg-transparent dark:text-dark-bluenavy-100"
           />
-          <div className="tooltip drak:after:content-['Light_Mode'] absolute top-1/2 hidden h-[2.2rem] w-auto -translate-y-1/2 items-center justify-center whitespace-nowrap rounded-md border border-light-separator bg-light-foreground px-[5px] py-0 text-[12px] after:text-light-primary after:content-['Dark_Mode'] group-hover/tooltip:flex ltr:right-[calc(100%+10px)] rtl:left-[calc(100%+10px)] dark:border-dark-separator dark:bg-dark-foreground dark:after:text-dark-primary">
+          <div className="tooltip drak:after:content-['Light_Mode'] absolute top-1/2 hidden h-[2.2rem] w-auto -translate-y-1/2 items-center justify-center rounded-md border border-light-separator bg-light-foreground px-[5px] py-0 text-[12px] whitespace-nowrap group-hover/tooltip:flex after:text-light-primary after:content-['Dark_Mode'] ltr:right-[calc(100%+10px)] rtl:left-[calc(100%+10px)] dark:border-dark-separator dark:bg-dark-foreground dark:after:text-dark-primary">
             <span className="absolute z-1 h-[0.6rem] w-[0.6rem] rounded-[0.1rem] border-b border-l border-light-separator bg-light-foreground ltr:left-[65px] ltr:rotate-[225deg] rtl:left-[-5px] rtl:rotate-45 dark:border-dark-separator dark:bg-dark-foreground"></span>
           </div>
         </div>
@@ -187,7 +187,7 @@ const Header: FC<PropsComponents> = ({ handleMenu, menu }) => {
             hidden
           />
           <label
-            className="backdrop peer-checked/menu:active-backdrop flex items-center"
+            className="backdrop flex items-center peer-checked/menu:active-backdrop"
             htmlFor="iconMenuButton"
           >
             <i className="simple-icon-grid hoverable-text"></i>
@@ -214,7 +214,7 @@ const Header: FC<PropsComponents> = ({ handleMenu, menu }) => {
             hidden
           />
           <label
-            className="backdrop peer-checked/notification:active-backdrop relative flex items-center"
+            className="backdrop relative flex items-center peer-checked/notification:active-backdrop"
             htmlFor="notificationButton"
           >
             <i className="simple-icon-bell hoverable-text"></i>
@@ -222,7 +222,7 @@ const Header: FC<PropsComponents> = ({ handleMenu, menu }) => {
               3
             </span>
           </label>
-          <div className="scrollbar dark:scrollbar-dark absolute top-10 hidden h-64 w-64 flex-col overflow-auto rounded-lg border border-light-primary/15 bg-light-input-bg p-3 peer-checked/notification:z-1001 peer-checked/notification:flex ltr:right-0 rtl:left-0 dark:border-dark-primary/15 dark:bg-dark-input-bg">
+          <div className="absolute top-10 hidden h-64 w-64 flex-col overflow-auto rounded-lg border border-light-primary/15 bg-light-input-bg p-3 scrollbar peer-checked/notification:z-1001 peer-checked/notification:flex ltr:right-0 rtl:left-0 dark:border-dark-primary/15 dark:bg-dark-input-bg dark:scrollbar-dark">
             {Array(5)
               .fill("")
               .map((item, index) => (
@@ -248,7 +248,7 @@ const Header: FC<PropsComponents> = ({ handleMenu, menu }) => {
           </div>
         </div>
 
-        <button className="hoverable-text hidden cursor-pointer sm:flex items-center">
+        <button className="hidden hoverable-text cursor-pointer items-center sm:flex">
           <i
             className="simple-icon-size-fullscreen"
             id="fullscreen"
@@ -273,33 +273,24 @@ const Header: FC<PropsComponents> = ({ handleMenu, menu }) => {
             className="backdrop peer-checked/profile:active-backdrop"
           >
             <span className="flex cursor-pointer items-center justify-between gap-2">
-              <span className="hidden text-[#878787] dark:text-[#dcdcdc]">
+              <span className="hidden text-[#878787] lg:block dark:text-[#dcdcdc]">
                 Sarah Kortney
               </span>
 
               <img
                 alt="Profile Picture"
-                src="./images/profiles/l-1.jpg"
+                src="/images/profiles/l-1.jpg"
                 className="size-7 rounded-full"
               />
             </span>
           </label>
 
-          <ul className="absolute top-10 hidden w-36 flex-col overflow-hidden rounded-lg border border-light-primary/15  bg-light-input-bg *:p-1 *:px-3 *:text-sm *:text-light-primary *:hover:bg-light-bg peer-checked/profile:z-1001 peer-checked/profile:flex ltr:right-0 rtl:left-0 dark:border-dark-primary/15  dark:bg-dark-input-bg dark:*:text-dark-primary dark:*:hover:bg-dark-bg">
-            <li className="">
-              <Link to="#">Account</Link>
+          <ul className="absolute top-10 hidden w-36 flex-col overflow-hidden rounded-lg border border-light-primary/15 bg-light-input-bg *:p-1 *:px-3 *:text-sm *:text-light-primary peer-checked/profile:z-1001 peer-checked/profile:flex *:hover:bg-light-bg ltr:right-0 rtl:left-0 dark:border-dark-primary/15 dark:bg-dark-input-bg dark:*:text-dark-primary dark:*:hover:bg-dark-bg">
+            <li>
+              <Link to="/user-setting">user setting</Link>
             </li>
             <li>
-              <Link to="#">Features</Link>
-            </li>
-            <li>
-              <Link to="#">History</Link>
-            </li>
-            <li>
-              <Link to="#">Support</Link>
-            </li>
-            <li>
-              <Link to="#">Sign out</Link>
+              <Link to="#">sign out</Link>
             </li>
           </ul>
         </div>

@@ -44,10 +44,10 @@ export default function UiVerifyCode() {
             )
           }
         />
-        <button className="text-light-light-text mt-5 flex w-[75%] justify-center gap-1 rounded-full bg-light-bg-btn py-[10px] font-bold text-dark-text xs:w-[50%] dark:bg-dark-bg-btn">
+        <button className="btn-primary mt-5 w-[75%] xs:w-[50%]">
           Verify
         </button>
-        <button className="hidden w-[50%] justify-center gap-1 rounded-full border border-light-bg-btn py-[10px] text-sm font-bold text-light-text lg:flex dark:border-hidden dark:bg-light-bg">
+        <button className="btn-outline-primary hidden w-[50%] justify-center gap-1 lg:flex">
           Back
         </button>
         <div className="my-7 flex w-[80%] items-center gap-3 text-light-text xs:w-[50%] lg:hidden dark:text-dark-text">

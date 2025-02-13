@@ -48,12 +48,13 @@ export default function Main() {
   return (
     <div>
       <Header handleMenu={handleMenu} menu={menu} />
-      <div className="sticky top-[72px] flex">
+      <div className="h-[calc(100vh-72px)] flex">
         <Navbar handleMenu={handleMenu} menu={menu} />
-        <div className="grow">
-          {pathname !== "/chat" && <TitlePage />}
+        <div className="grow h-full">
+          {/* {pathname !== "/chat" && <TitlePage />} */}
           <Outlet />
-          {pathname !== "/chat" && <Footer />}
+
+          {/* {pathname !== "/chat" && <Footer />} */}
         </div>
       </div>
     </div>

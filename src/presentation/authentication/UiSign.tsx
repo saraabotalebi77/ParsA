@@ -46,20 +46,20 @@ export default function UiSign() {
         />
         <button
           type="submit"
-          className="text-light-light-text mt-5 flex w-[75%] justify-center gap-1 rounded-full bg-light-bg-btn py-[10px] font-bold text-dark-text group-invalid:pointer-events-none group-invalid:opacity-70 xs:w-[50%] dark:bg-dark-bg-btn"
+          className="btn-primary mt-5 w-[75%] group-invalid:pointer-events-none group-invalid:opacity-70 xs:w-[50%]"
         >
           Sign in | up
         </button>
         <button
           type="button"
-          className="hidden w-[50%] justify-center gap-1 rounded-full border border-light-bg-btn py-[10px] lg:flex dark:border-hidden dark:bg-light-bg"
+          className="btn-outline-primary hidden w-[50%] justify-center gap-1 lg:flex"
         >
           <img
             src="./images/login/Google-icon.png"
             alt="google"
             className="h-5 w-5"
           />
-          <span className="text-sm font-bold text-light-text">
+          <span>
             Continue With Google
           </span>
         </button>
